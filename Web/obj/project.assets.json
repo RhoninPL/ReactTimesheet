@@ -9700,15 +9700,15 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\michal\\.nuget\\packages\\": {}
+    "C:\\Users\\Michal\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Repos\\ReactTimesheet\\Web\\Web.csproj",
+      "projectUniqueName": "C:\\Users\\Michal\\Documents\\git\\ReactTimesheet\\Web\\Web.csproj",
       "projectName": "Web",
-      "projectPath": "D:\\Repos\\ReactTimesheet\\Web\\Web.csproj",
-      "outputPath": "D:\\Repos\\ReactTimesheet\\Web\\obj\\",
+      "projectPath": "C:\\Users\\Michal\\Documents\\git\\ReactTimesheet\\Web\\Web.csproj",
+      "outputPath": "C:\\Users\\Michal\\Documents\\git\\ReactTimesheet\\Web\\obj\\",
       "projectStyle": "PackageReference",
       "originalTargetFrameworks": [
         "netcoreapp1.1"

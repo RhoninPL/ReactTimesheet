@@ -16,3 +16,12 @@ D:\Repos\ReactTimesheet\Web\obj\Debug\netcoreapp1.1\Web.csprojResolveAssemblyRef
 D:\Repos\ReactTimesheet\Web\obj\Debug\netcoreapp1.1\Web.AssemblyInfo.cs
 D:\Repos\ReactTimesheet\Web\obj\Debug\netcoreapp1.1\Web.dll
 D:\Repos\ReactTimesheet\Web\obj\Debug\netcoreapp1.1\Web.pdb
+C:\Users\Michal\Documents\git\ReactTimesheet\Web\bin\Debug\netcoreapp1.1\Web.deps.json
+C:\Users\Michal\Documents\git\ReactTimesheet\Web\bin\Debug\netcoreapp1.1\Web.runtimeconfig.json
+C:\Users\Michal\Documents\git\ReactTimesheet\Web\bin\Debug\netcoreapp1.1\Web.runtimeconfig.dev.json
+C:\Users\Michal\Documents\git\ReactTimesheet\Web\bin\Debug\netcoreapp1.1\Web.dll
+C:\Users\Michal\Documents\git\ReactTimesheet\Web\bin\Debug\netcoreapp1.1\Web.pdb
+C:\Users\Michal\Documents\git\ReactTimesheet\Web\obj\Debug\netcoreapp1.1\Web.csprojResolveAssemblyReference.cache
+C:\Users\Michal\Documents\git\ReactTimesheet\Web\obj\Debug\netcoreapp1.1\Web.AssemblyInfo.cs
+C:\Users\Michal\Documents\git\ReactTimesheet\Web\obj\Debug\netcoreapp1.1\Web.dll
+C:\Users\Michal\Documents\git\ReactTimesheet\Web\obj\Debug\netcoreapp1.1\Web.pdb
