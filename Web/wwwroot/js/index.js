@@ -1,5 +1,6 @@
 ﻿import React from "react";
 import ReactDOM from "react-dom";
+import Form from './components/Form';
 import './index.scss';
 
 class App extends React.Component {
@@ -7,9 +8,9 @@ class App extends React.Component {
         return (
             <div>
                 <h1>React Timesheet</h1>
-                <div>bla bla</div>
+                <Form>bla bla</Form>
             </div>
-        )
+        );
     }
 };
 
