@@ -10959,11 +10959,34 @@ var Form = function (_React$Component) {
 
         var _this = _possibleConstructorReturn(this, (Form.__proto__ || Object.getPrototypeOf(Form)).call(this, props));
 
-        _this.state = { hours: [] };
+        _this.state = { hours: [], company: "", time: "" };
+        _this.addNewHour = _this.addNewHour.bind(_this);
+        _this.handleChangeCompany = _this.handleChangeCompany.bind(_this);
+        _this.handleChangeTime = _this.handleChangeTime.bind(_this);
         return _this;
     }
 
     _createClass(Form, [{
+        key: 'handleChangeCompany',
+        value: function handleChangeCompany(event) {
+            this.setState({ company: event.target.value });
+        }
+    }, {
+        key: 'handleChangeTime',
+        value: function handleChangeTime(event) {
+            this.setState({ time: event.target.value });
+        }
+    }, {
+        key: 'addNewHour',
+        value: function addNewHour(event) {
+            event.preventDefault();
+            if (this.state.time !== "" && this.state.company !== "") {
+                var newHours = this.state.hours;
+                newHours.push({ Name: "test", Time: this.state.time, Company: this.state.company });
+                this.setState({ hours: newHours });
+            }
+        }
+    }, {
         key: 'componentDidMount',
         value: function componentDidMount() {
             this.setState({
@@ -10991,11 +11014,11 @@ var Form = function (_React$Component) {
                     _react2.default.createElement(
                         _FormGroup2.default,
                         { className: 'form-group' },
-                        _react2.default.createElement(_FormControl2.default, { type: 'text', id: 'company', placeholder: 'Enter company name' }),
-                        _react2.default.createElement(_FormControl2.default, { type: 'text', id: 'time', placeholder: 'Enter time' }),
+                        _react2.default.createElement(_FormControl2.default, { type: 'text', id: 'company', placeholder: 'Enter company name', onChange: this.handleChangeCompany, value: this.state.company }),
+                        _react2.default.createElement(_FormControl2.default, { type: 'number', id: 'time', placeholder: 'Enter time', onChange: this.handleChangeTime, value: this.state.time }),
                         _react2.default.createElement(
                             _Button2.default,
-                            { type: 'submit' },
+                            { type: 'submit', onClick: this.addNewHour.bind(this) },
                             'Save'
                         )
                     )
