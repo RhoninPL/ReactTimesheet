@@ -10992,11 +10992,11 @@ var Form = function (_React$Component) {
             this.setState({
                 hours: [{
                     Name: "Jan Kowalski",
-                    Time: "8h",
+                    Time: "8",
                     Company: "Microsoft"
                 }, {
                     Name: "Kazimierz Nowak",
-                    Time: "8h",
+                    Time: "8",
                     Company: "Google"
                 }]
             });
@@ -11131,17 +11131,18 @@ var GridTimeSheet = function (_React$Component) {
                         { className: 'show-grid' },
                         _react2.default.createElement(
                             _Col2.default,
-                            { xs: 6, md: 3 },
+                            null,
                             hour.Name
                         ),
                         _react2.default.createElement(
                             _Col2.default,
-                            { xs: 2, md: 1 },
-                            hour.Time
+                            null,
+                            hour.Time,
+                            'h'
                         ),
                         _react2.default.createElement(
                             _Col2.default,
-                            { xs: 6, md: 3 },
+                            null,
                             hour.Company
                         )
                     );
@@ -13927,7 +13928,7 @@ exports = module.exports = __webpack_require__(104)(undefined);
 
 
 // module
-exports.push([module.i, ".timesheet-grid {\n  text-align: center; }\n  @media (min-width: 720px) {\n    .timesheet-grid .container {\n      max-width: 500px; } }\n  @media (min-width: 1000px) {\n    .timesheet-grid .container {\n      max-width: 700px; } }\n  .timesheet-grid > div {\n    float: left; }\n  .timesheet-grid form {\n    float: right; }\n", ""]);
+exports.push([module.i, ".timesheet-grid {\n  text-align: center; }\n  @media (min-width: 720px) {\n    .timesheet-grid .container {\n      max-width: 500px; } }\n  @media (min-width: 1000px) {\n    .timesheet-grid .container {\n      max-width: 700px; } }\n  .timesheet-grid > div {\n    float: left;\n    background: #688A01;\n    box-shadow: 5px 5px 5px 5px #688A01;\n    padding: 10px;\n    margin: 10px; }\n  .timesheet-grid form {\n    float: right;\n    background: #688A01;\n    box-shadow: 5px 5px 5px 5px #688A01;\n    padding: 10px;\n    margin: 10px; }\n", ""]);
 
 // exports
 
@@ -13941,7 +13942,7 @@ exports = module.exports = __webpack_require__(104)(undefined);
 
 
 // module
-exports.push([module.i, "body {\n  background-color: #C7D66D; }\n\ndiv#app {\n  background-color: #DCEAB2;\n  border: 1px solid #000000;\n  border-radius: 5px;\n  box-shadow: 0px 0px 10px #808080;\n  padding: 10px; }\n", ""]);
+exports.push([module.i, "div#app {\n  background-color: #76980D;\n  border-radius: 5px;\n  box-shadow: 0px 0px 10px #888;\n  padding: 10px; }\n\nbody {\n  background-color: white;\n  color: #455C00; }\n", ""]);
 
 // exports
 

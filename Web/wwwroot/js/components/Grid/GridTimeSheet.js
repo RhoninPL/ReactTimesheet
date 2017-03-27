@@ -14,9 +14,9 @@ class GridTimeSheet extends React.Component {
             <Grid>
                 {this.props.hours.map(hour => {
                     return <Row className="show-grid">
-                        <Col xs={6} md={3}>{hour.Name}</Col>
-                        <Col xs={2} md={1}>{hour.Time}h</Col>
-                        <Col xs={6} md={3}>{hour.Company}</Col>
+                        <Col>{hour.Name}</Col>
+                        <Col>{hour.Time}h</Col>
+                        <Col>{hour.Company}</Col>
                     </Row>})}
             </Grid>
         );
