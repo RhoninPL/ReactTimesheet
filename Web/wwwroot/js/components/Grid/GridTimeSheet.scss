@@ -1,0 +1,13 @@
+﻿.grid-time {
+    width: 100%;
+    background: #688A01;
+
+    td {
+        padding: 10px;
+        border: 1px solid #455C00
+    }
+}
+
+.table-hover tbody tr:hover td, .table-hover tbody tr:hover th {
+    background-color: #5C7900;
+}

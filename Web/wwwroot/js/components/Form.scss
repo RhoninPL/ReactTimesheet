@@ -1,25 +1,11 @@
 ﻿.timesheet-grid {
-    text-align: center;
-
-
-    @media (min-width: 720px) {
-        .container {
-            max-width: 500px;
-        }
-    }
-
-    @media(min-width: 1000px) {
-        .container {
-            max-width: 700px;
-        }
+    .container {
+        width: 60%;
     }
 
     > div {
         float: left;
         background: #688A01;
-        box-shadow: 5px 5px 5px 5px #688A01;
-        padding: 10px;
-        margin: 10px;
     }
 
     form {
@@ -28,5 +14,17 @@
         box-shadow: 5px 5px 5px 5px #688A01;
         padding: 10px;
         margin: 10px;
+    }
+}
+
+.main-timesheet {
+    .timesheet-grid {
+        width: 70%;
+        float: left;
+    }
+
+    form {
+        width: 29%;
+        float: right;
     }
 }

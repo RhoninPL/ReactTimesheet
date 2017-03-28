@@ -47,8 +47,10 @@ class Form extends React.Component {
 
     render() {
         return (
-            <div className="timesheet-grid">
-                <GridTimeSheet hours={this.state.hours} />
+            <div className="main-timesheet">
+                <div className="timesheet-grid">
+                    <GridTimeSheet hours={this.state.hours} />
+                </div>
                 <form>
                     <FormGroup className="form-group">
                         <FormControl type="text" id="company" placeholder="Enter company name" onChange={this.handleChangeCompany} value={this.state.company} />

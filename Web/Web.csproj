@@ -16,10 +16,8 @@
     <Content Include="wwwroot\js\components\Form.js" />
     <Content Include="wwwroot\js\components\Form.jsx" />
     <Content Include="wwwroot\js\components\Form.scss" />
-    <Content Include="wwwroot\js\components\Grid\Grid" />
-    <Content Include="wwwroot\js\components\Grid\Grid.jsx" />
-    <Content Include="wwwroot\js\components\Grid\GridTimeSheet.js" />
-    <Content Include="wwwroot\js\components\Grid\GridTimeSheet.jsx" />
+    <Content Include="wwwroot\js\components\Grid\GridTimeSheet" />
+    <Content Include="wwwroot\js\components\Grid\GridTimeSheet.scss" />
     <Content Include="wwwroot\js\index.scss" />
     <Content Include="wwwroot\js\site.js" />
     <Content Include="wwwroot\js\site.min.js" />
