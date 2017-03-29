@@ -1,0 +1,7 @@
+D:\Repos\ReactTimesheet\Services\bin\Debug\netcoreapp1.1\Services.deps.json
+D:\Repos\ReactTimesheet\Services\bin\Debug\netcoreapp1.1\Services.dll
+D:\Repos\ReactTimesheet\Services\bin\Debug\netcoreapp1.1\Services.pdb
+D:\Repos\ReactTimesheet\Services\obj\Debug\netcoreapp1.1\Services.csprojResolveAssemblyReference.cache
+D:\Repos\ReactTimesheet\Services\obj\Debug\netcoreapp1.1\Services.AssemblyInfo.cs
+D:\Repos\ReactTimesheet\Services\obj\Debug\netcoreapp1.1\Services.dll
+D:\Repos\ReactTimesheet\Services\obj\Debug\netcoreapp1.1\Services.pdb

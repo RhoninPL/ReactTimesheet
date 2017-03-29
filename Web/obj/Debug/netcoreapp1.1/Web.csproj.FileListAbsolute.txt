@@ -25,3 +25,5 @@ C:\Users\Michal\Documents\git\ReactTimesheet\Web\obj\Debug\netcoreapp1.1\Web.csp
 C:\Users\Michal\Documents\git\ReactTimesheet\Web\obj\Debug\netcoreapp1.1\Web.AssemblyInfo.cs
 C:\Users\Michal\Documents\git\ReactTimesheet\Web\obj\Debug\netcoreapp1.1\Web.dll
 C:\Users\Michal\Documents\git\ReactTimesheet\Web\obj\Debug\netcoreapp1.1\Web.pdb
+D:\Repos\ReactTimesheet\Web\bin\Debug\netcoreapp1.1\Domain.dll
+D:\Repos\ReactTimesheet\Web\bin\Debug\netcoreapp1.1\Domain.pdb
