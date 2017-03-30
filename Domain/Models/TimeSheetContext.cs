@@ -11,5 +11,7 @@ namespace Domain.Models
         { }
 
         public DbSet<TimeSheetEntry> Entries { get; set; }
+
+
     }
 }

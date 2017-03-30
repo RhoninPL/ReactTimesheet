@@ -7075,15 +7075,15 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\michal\\.nuget\\packages\\": {}
+    "C:\\Users\\Michal\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Repos\\ReactTimesheet\\Services\\Services.csproj",
+      "projectUniqueName": "C:\\Users\\Michal\\Source\\Repos\\ReactTimesheet\\Services\\Services.csproj",
       "projectName": "Services",
-      "projectPath": "D:\\Repos\\ReactTimesheet\\Services\\Services.csproj",
-      "outputPath": "D:\\Repos\\ReactTimesheet\\Services\\obj\\",
+      "projectPath": "C:\\Users\\Michal\\Source\\Repos\\ReactTimesheet\\Services\\Services.csproj",
+      "outputPath": "C:\\Users\\Michal\\Source\\Repos\\ReactTimesheet\\Services\\obj\\",
       "projectStyle": "PackageReference",
       "originalTargetFrameworks": [
         "netcoreapp1.1"
