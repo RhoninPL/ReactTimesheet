@@ -5,8 +5,8 @@
 /Web/node_modules
 /Web/node_modules
 /Web/node_modules
-/Web/bin
-/Web/obj
+/Web/bin/
+/Web/obj/
 /Domain/bin
 /Domain/obj
 /Services/bin
