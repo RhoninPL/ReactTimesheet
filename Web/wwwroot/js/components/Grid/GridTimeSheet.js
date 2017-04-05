@@ -12,7 +12,7 @@ class GridTimeSheet extends React.Component {
             <table className="grid-time table-responsive table-hover">
                 <tbody>
                     {this.props.hours.map(hour => {
-                        return (<tr>
+                        return (<tr key={hour.id}>
                             <td>{hour.Name}</td>
                             <td>{hour.Time}h</td>
                             <td>{hour.Company}</td>

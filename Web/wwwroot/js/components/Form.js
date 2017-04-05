@@ -3,6 +3,7 @@ import Button from 'react-bootstrap/lib/Button';
 import FormGroup from 'react-bootstrap/lib/FormGroup';
 import FormControl from 'react-bootstrap/lib/FormControl';
 import GridTimeSheet from './Grid/GridTimeSheet';
+import Axios from 'axios';
 import './Form.scss';
 
 class Form extends React.Component {
@@ -32,24 +33,40 @@ class Form extends React.Component {
     }
 
     componentDidMount() {
-        this.setState({
-            hours: [{
-                Name: "Jan Kowalski",
-                Time: "8",
-                Company: "Microsoft"
-            }, {
-                Name: "Kazimierz Nowak",
-                Time: "8",
-                Company: "Google"
-            }]
-        });
+        var self = this;
+        Axios.get('/api/TimeSheetEntries/GetTimeSheetEntries')
+            .then(function(response) {
+                console.log(response);
+                self.setState({
+                    hours: response.data.map(function(element) {
+                        return {
+                            id: element.timeSheetEntryId,
+                            Name: element.user,
+                            Time: element.workTime,
+                            Company: element.company
+                        }
+                    })
+                
+                });
+            });
+        //this.setState({
+        //    hours: [{
+        //        Name: "Jan Kowalski",
+        //        Time: "8",
+        //        Company: "Microsoft"
+        //    }, {
+        //        Name: "Kazimierz Nowak",
+        //        Time: "8",
+        //        Company: "Google"
+        //    }]
+        //});
     }
 
     render() {
         return (
             <div className="main-timesheet">
                 <div className="timesheet-grid">
-                    <GridTimeSheet hours={this.state.hours} />
+                    <GridTimeSheet hours={this.state.hours}/>
                 </div>
                 <form>
                     <FormGroup className="form-group">
