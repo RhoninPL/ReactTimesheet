@@ -1,4 +1,5 @@
 using System.Linq;
+using System.Net;
 using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
 using Domain.Models;
@@ -30,14 +31,14 @@ namespace Web.Controllers
 
         [HttpPost]
         [Route("AddEntry")]
-        public IActionResult AddEntry([FromBody]NewEntry newEntry)
+        public HttpStatusCode AddEntry([FromBody]NewEntry newEntry)
         {
             if (newEntry == null)
-                return new BadRequestResult();
+                return HttpStatusCode.BadRequest;
 
             repository.Add(Mapper.Map<NewEntry,TimeSheetEntry>(newEntry));
 
-            return new OkResult();
+            return HttpStatusCode.OK;
         }
 
         [HttpPost]
@@ -47,15 +48,15 @@ namespace Web.Controllers
             if (editEntry == null)
                 return new BadRequestResult();
 
-            var entry = _context.Entries.FirstOrDefault(item => item.TimeSheetEntryId == editEntry.Id);
-            if (entry == null)
-                return new NotFoundResult();
+            //var entry = _context.Entries.FirstOrDefault(item => item.TimeSheetEntryId == editEntry.Id);
+            //if (entry == null)
+            //    return new NotFoundResult();
 
-            entry.Company = editEntry.Company;
-            entry.WorkTime = editEntry.Time;
-            entry.User = editEntry.User;
+            //entry.Company = editEntry.Company;
+            //entry.WorkTime = editEntry.Time;
+            //entry.User = editEntry.User;
 
-            _context.SaveChanges();
+            //_context.SaveChanges();
 
             return new OkResult();
         }

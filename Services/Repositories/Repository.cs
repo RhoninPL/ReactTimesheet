@@ -17,6 +17,12 @@ namespace Services.Repositories
             this.context = context;
         }
 
+        public void Update(TEntity entity)
+        {
+            context.Set<TEntity>().Attach(entity);
+            context.Entry(entity).State = EntityState.Modified;
+        }
+
         public IQueryable<TEntity> GetAllItems()
         {
             return context.Set<TEntity>();
@@ -30,6 +36,11 @@ namespace Services.Repositories
         public void Add(TEntity entity)
         {
             context.Set<TEntity>().Add(entity);
+            context.SaveChanges();
+        }
+
+        public void Dispose()
+        {
             context.SaveChanges();
         }
     }

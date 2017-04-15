@@ -26,19 +26,29 @@ class Form extends React.Component {
     addNewHour(event) {
         event.preventDefault();
         if (this.state.time !== "" && this.state.company !== "") {
-            var newHours = this.state.hours;
-            newHours.push({ Name: "test", Time: this.state.time, Company: this.state.company });
-            this.setState({ hours: newHours });
+            Axios.post('/api/TimeSheetEntries/AddEntry',
+                {
+                    User: "test", Time: this.state.time, Company: this.state.company
+                })
+                .then(() => {
+                    var newHours = this.state.hours;
+                    newHours.push({ Name: "test", Time: this.state.time, Company: this.state.company });
+                    this.setState({ hours: newHours });
+                })
+                .catch(() => {
+                    alert("There was an error while adding new entry.");
+                });
+
         }
     }
 
     componentDidMount() {
         var self = this;
         Axios.get('/api/TimeSheetEntries/GetTimeSheetEntries')
-            .then(function(response) {
+            .then(function (response) {
                 console.log(response);
                 self.setState({
-                    hours: response.data.map(function(element) {
+                    hours: response.data.map(function (element) {
                         return {
                             id: element.timeSheetEntryId,
                             Name: element.user,
@@ -46,27 +56,16 @@ class Form extends React.Component {
                             Company: element.company
                         }
                     })
-                
+
                 });
             });
-        //this.setState({
-        //    hours: [{
-        //        Name: "Jan Kowalski",
-        //        Time: "8",
-        //        Company: "Microsoft"
-        //    }, {
-        //        Name: "Kazimierz Nowak",
-        //        Time: "8",
-        //        Company: "Google"
-        //    }]
-        //});
     }
 
     render() {
         return (
             <div className="main-timesheet">
                 <div className="timesheet-grid">
-                    <GridTimeSheet hours={this.state.hours}/>
+                    <GridTimeSheet hours={this.state.hours} />
                 </div>
                 <form>
                     <FormGroup className="form-group">
