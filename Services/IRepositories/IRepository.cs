@@ -7,6 +7,6 @@ namespace Services.IRepositories
 {
     public interface IRepository<TEntity>
     {
-        List<TEntity> GetAllItems();
+        IQueryable<TEntity> GetAllItems();
     }
 }

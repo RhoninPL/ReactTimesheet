@@ -1,8 +1,10 @@
 using System.Linq;
+using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
 using Domain.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Http.Internal;
+using Services.Repositories;
 using Web.Models;
 
 namespace Web.Controllers
@@ -11,10 +13,12 @@ namespace Web.Controllers
     public class TimeSheetEntriesController : Controller
     {
         private readonly TimeSheetContext _context;
+        private Repository<TimeSheetEntry> repository;
 
         public TimeSheetEntriesController(TimeSheetContext context)
         {
             _context = context;
+            repository = new Repository<TimeSheetEntry>(_context);
         }
 
         [Route("GetTimeSheetEntries")]
@@ -31,14 +35,7 @@ namespace Web.Controllers
             if (newEntry == null)
                 return new BadRequestResult();
 
-            _context.Entries.Add(new TimeSheetEntry()
-            {
-                Company = newEntry.Company,
-                User = newEntry.User,
-                WorkTime = newEntry.Time
-            });
-
-            _context.SaveChanges();
+            repository.Add(Mapper.Map<NewEntry,TimeSheetEntry>(newEntry));
 
             return new OkResult();
         }

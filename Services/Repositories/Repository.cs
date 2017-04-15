@@ -11,17 +11,26 @@ namespace Services.Repositories
     public class Repository<TEntity> : IRepository<TEntity> where TEntity : class
     {
         private TimeSheetContext context;
-        private DbSet<TEntity> entities;
 
         public Repository(TimeSheetContext context)
         {
             this.context = context;
-            entities = this.context.Set<TEntity>();
         }
 
-        public List<TEntity> GetAllItems()
+        public IQueryable<TEntity> GetAllItems()
         {
-            return entities.ToList();
+            return context.Set<TEntity>();
+        }
+
+        public TEntity GetItem(int id)
+        {
+            return context.Find<TEntity>(id);
+        }
+
+        public void Add(TEntity entity)
+        {
+            context.Set<TEntity>().Add(entity);
+            context.SaveChanges();
         }
     }
 }
